@@ -5,20 +5,20 @@ POST {{baseUrl}}/alunos
 Content-Type: application/json
 
 {
-  "nome" : "joão jose",
-  "dataNascimento": "1998-11-21",
+  "nome" : "radames p",
+  "dataNascimento": "1991-11-21",
   "sexo": "M",
-  "telefone": "49917589037",
-  "celular": "49982300319",
-  "email" : "joao@email.com",
+  "telefone": "49917588937",
+  "celular": "499829000319",
+  "email" : "radames@gmail",
   "observacao": "aluno iniciante",
   "endereco": "rua casemiro de abreu",
-  "numero": "404",
-  "complemento": "Edificio rosa",
-  "bairro": "bela vista",
-  "cidade": "chapecó",
+  "numero": "403",
+  "complemento": "casa de pedra",
+  "bairro": "efapi",
+  "cidade": "florianopolis",
   "estado": "sc",
-  "cep": "89012901"
+  "cep": "89132901"
 }
 
 ### Listar alunos
@@ -89,3 +89,17 @@ Content-Type: application/json
   "estado": "sampa"
 }
 
+### Listar todos
+GET {{baseUrl}}/alunos?page=0&size=10&sort=nome,asc
+
+### Listar por nome
+GET {{baseUrl}}/alunos?nome=joao&page=0&size=10&sort=nome,asc
+
+### Listar por cidade
+GET {{baseUrl}}/alunos?cidade=florianopolis&page=0&size=10&sort=nome,asc
+
+### Listar por estado
+GET {{baseUrl}}/alunos?estado=sc&page=0&size=10&sort=nome,asc
+
+### Listar por email
+GET {{baseUrl}}/alunos?email=joao@email.com&page=0&size=10&sort=nome,asc
