@@ -1,0 +1,91 @@
+@baseUrl = http://localhost:8080
+
+### Cadastrar aluno
+POST {{baseUrl}}/alunos
+Content-Type: application/json
+
+{
+  "nome" : "joão jose",
+  "dataNascimento": "1998-11-21",
+  "sexo": "M",
+  "telefone": "49917589037",
+  "celular": "49982300319",
+  "email" : "joao@email.com",
+  "observacao": "aluno iniciante",
+  "endereco": "rua casemiro de abreu",
+  "numero": "404",
+  "complemento": "Edificio rosa",
+  "bairro": "bela vista",
+  "cidade": "chapecó",
+  "estado": "sc",
+  "cep": "89012901"
+}
+
+### Listar alunos
+GET {{baseUrl}}/alunos
+
+### Listar alunos com paginação
+GET {{baseUrl}}/alunos?page=0&size=10&sort=nome,asc
+
+### Buscar aluno por id
+GET {{baseUrl}}/alunos/1
+
+### Atualizar aluno
+PUT {{baseUrl}}/alunos/1
+Content-Type: application/json
+
+{
+      "nome" : "joão jose atualizado",
+      "dataNascimento": "1998-11-21",
+      "sexo": "M",
+      "telefone": "49917589037",
+      "celular": "49982300319",
+      "email" : "joao@email.com",
+      "observacao": "aluno iniciante",
+      "endereco": "rua casemiro de abreu",
+      "numero": "404",
+      "complemento": "Edificio rosa",
+      "bairro": "bela vista",
+      "cidade": "chapecó",
+      "estado": "sc",
+      "cep": "89012901"
+}
+
+### Excluir aluno
+DELETE {{baseUrl}}/alunos/1
+
+### Cadastrar aluno
+POST {{baseUrl}}/alunos
+Content-Type: application/json
+
+{
+  "nome" : "maria heloisa",
+  "dataNascimento": "1991-10-09",
+  "sexo": "M",
+  "telefone": "49917589037",
+  "celular": "49982300319",
+  "email" : "joao@email.com",
+  "observacao": "aluno iniciante",
+  "endereco": "rua casemiro de abreu",
+  "numero": "404",
+  "complemento": "Edificio rosa",
+  "bairro": "bela vista",
+  "cidade": "chapecó",
+  "estado": "sc",
+  "cep": "89012901"
+}
+
+### Cadastrar aluno inválido
+POST {{baseUrl}}/alunos
+Content-Type: application/json
+
+{
+  "nome" : "",
+  "dataNascimento": "1991-10-09",
+  "sexo": "Masculino",
+  "telefone": "",
+  "celular": "",
+  "email" : "emailinvalido",
+  "estado": "sampa"
+}
+
