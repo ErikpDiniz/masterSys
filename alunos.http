@@ -93,7 +93,7 @@ Content-Type: application/json
 GET {{baseUrl}}/alunos?page=0&size=10&sort=nome,asc
 
 ### Listar por nome
-GET {{baseUrl}}/alunos?nome=joao&page=0&size=10&sort=nome,asc
+GET {{baseUrl}}/alunos?nome=radames&page=0&size=10&sort=nome,asc
 
 ### Listar por cidade
 GET {{baseUrl}}/alunos?cidade=florianopolis&page=0&size=10&sort=nome,asc
@@ -103,3 +103,12 @@ GET {{baseUrl}}/alunos?estado=sc&page=0&size=10&sort=nome,asc
 
 ### Listar por email
 GET {{baseUrl}}/alunos?email=joao@email.com&page=0&size=10&sort=nome,asc
+
+### Faturamento mensal
+GET {{baseUrl}}/relatorios/faturamento-mensal
+
+### Faturas em aberto
+GET {{baseUrl}}/relatorios/faturas-em-aberto
+
+### Listar alunos por cidade
+GET {{baseUrl}}/relatorios/alunos-por-cidade
